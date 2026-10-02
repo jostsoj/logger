@@ -23,23 +23,23 @@ func logf(level string, format string, args ...any) {
 
 func Debugf(format string, args ...any) {
 	if EnableDebug {
-		logf("[DEBUG]", format, args...)
+		logf("DEBUG", format, args...)
 	}
 }
 
 func Infof(format string, args ...any) {
-	logf("[INFO ]", format, args...)
+	logf("INFO", format, args...)
 }
 
 func Warnf(format string, args ...any) {
-	logf("[WARN ]", format, args...)
+	logf("WARN", format, args...)
 }
 
 func Errorf(format string, args ...any) {
-	logf("[ERROR]", format, args...)
+	logf("ERROR", format, args...)
 }
 
 func Fatalf(format string, args ...any) {
-	logf("[FATAL]", format, args...)
+	logf("FATAL", format, args...)
 	panic(fmt.Sprintf(format, args...))
 }
